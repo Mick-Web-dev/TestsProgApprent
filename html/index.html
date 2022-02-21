@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>1 ère Page html</title>
+</head>
+<body>
+    <!--Entête de la page Web, contient un titre et une description-->
+    <div class="entete">
+        <h1>Bienvenue sur ma première page HTML</h1>
+        <p>Le but de cette page est de construire une page HTML classique respectant les normes <a href="https://www.w3.org/standards/webdesign/htmlcss">W3C</a></p>
+    </div>
+    <!--Navigation qui contient les différents liens vers des éléments du site ou une autre page-->
+    <nav class="menu" id="menu">
+        <h2>Accès rapide aux blocs de la page:</h2>
+        <ul>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#listes">Listes</a></li>
+            <li><a href="#tableaux">Tableaux</a></li>
+            <li><a href="#formulaires">Formulaires</a></li>
+        </ul>
+    </nav>
+    <!--Barre latérale sans rapport direct avec la page-->
+    <aside>
+        <h2>Informations complémentaires :</h2>
+    </aside>
+    <!--Contenu principal de la page-->
+    <main>
+        <h2>Les notions de base à savoir mettre en application :</h2>
+        <img src="../img/th.jpg" alt="image représentant le code informatique dans un espace de réflexion">
+        <p>Mise en pratiques des connaissances HTML au travers d'une page regroupant toutes notions fondammentale</p>
+        <p>les blocs Suivants, sont des SECTIONS</p>
+
+        <!--Les articles-->
+        <section id="articles">
+            <h2> Article: l'élément de contenu d'un article - <a href="#menu">retour menu</a></h2>
+            <p>L'élément <code>&lt;article&gt;</code> représente une composition autonome dans un document, une page, une application ou un site, destinée à être distribuée ou réutilisée de manière indépendante (par exemple, dans le cadre d'une syndication). Exemples : un message de forum, un article de magazine ou de journal, ou un article de blog, une fiche produit, un commentaire soumis par un utilisateur, un widget ou gadget interactif, ou tout autre élément de contenu indépendant.</p>
+            <h3>Exemple :</h3>
+            <article>
+                <h4>Bloc article <code>&lt;h4&gt;</code></h4>
+                <p><code>&lt;img&gt;</code></p>
+                <img src="../img/th (1).jpg" alt="image représentant un cryptographe">
+                <p><code>&lt;p&gt;</code></p>
+                <p>Cette section représente un bloc article :" <code>&lt;article&gt;</code><code>&lt;/article&gt;</code>", incluant le h4, l'image, ainsi que cette zone de texte. On peut également se rendre compte que le texte diffère des autres zones.</p>
+            </article>
+        </section>
+
+        <!--Les listes-->
+        <section id="listes">
+            <h2>Les listes - <a href="#menu">retour menu</a></h2>
+            <h3>Listes non-ordonnées</h3>
+            <p>Les listes non-ordonnées sont utilisées pour représenter des listes d'éléments pour lesquelles l'ordre n'a pas d'importance. comme une liste de courses. Les listes non-ordonnées débutent par un élément <code>&lt;ul&gt;</code> (unordered list) qui enveloppe tous les éléments de la liste :</p>
+            <h3>Composition HTML d'une liste non-ordonnée:</h3>
+            <ul>
+                <li>ul : balise ouvrante<code>&lt;ul&gt;</code></li>
+                <li>li : <code>&lt;li&gt;</code> il y a autant de "li" qu'il y a de chose a lister <code>&lt;/li&gt;</code></li>
+                <li>ul : balise fermante<code>&lt;/ul&gt;</code></li>
+            </ul>
+            <h3>Listes ordonnées</h3>
+            <p>Les listes non-ordonnées sont utilisées pour représenter des listes d'éléments pour lesquelles l'ordre n'a pas d'importance. comme une liste de courses. Les listes non-ordonnées débutent par un élément <code>&lt;ol&gt;</code> (ordered list) qui enveloppe tous les éléments de la liste :</p>
+            <p>L'entrée différe d'une liste non ordonnée, dans la mesure ou ce n'est pas un caratère qui ouvre la ligne, mais un chiffre!</p>
+            <h3>Composition HTML d'une liste non-ordonnée:</h3>
+            <ol>
+                <li>ol : balise ouvrante<code>&lt;ol&gt;</code></li>
+                <li>li : <code>&lt;li&gt;</code> il y a autant de "li" qu'il y a de chose a lister par ordre <code>&lt;/li&gt;</code></li>
+                <li>ol : balise fermante<code>&lt;/ol&gt;</code></li>
+            </ol>
+        </section>
+
+        <!--Les tableaux-->
+        <section id="tableaux">
+            <h2>Les tableaux - <a href="#menu">retour menu</a></h2>
+            <p>Ici cette section représente un tableau. Cependant il faut comprendre qu'il s'agit de l'organisation des données que l'on souhaite afficher.</p>
+            <p>Pour obtenir l'apparence d'un tableau avec des ligne et des colonnes délimitées par des trait, il faut ajouter du style, ce qui peut être fait par l'ajout d'un fichier style.css ainsi qu'un lien dans la partie head de cette page <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> </p>
+            <h3>Exemple :</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Colonne-1</td>
+                        <td>Colonne-2</td>
+                        <td>Colonne-3</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data1</td>
+                        <td>Data2</td>
+                        <td>Data3</td>
+                    </tr>
+                    <tr>
+                        <td>Data4</td>
+                        <td>Data5</td>
+                        <td>Data6</td>
+                    </tr>
+                    <tr>
+                        <td>Data7</td>
+                        <td>Data8</td>
+                        <td>Data9</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!--Formulaire-->
+        <section id="formulaires">
+            
+        </section>
+    </main>
+    <!--Pied de page, contient les information de propriété & de droits réservés-->
+    <footer>
+        <p>Copyright  MickaelHesliere&copy;2022 - All-rights-Reserved</p>
+    </footer>
+</body>
+</html>
