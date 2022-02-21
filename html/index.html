@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>1 ère Page html</title>
 </head>
 <body>
     <!--Entête de la page Web, contient un titre et une description-->
     <div class="entete">
-        <h1>Bienvenue sur ma première page HTML</h1>
-        <p>Le but de cette page est de construire une page HTML classique respectant les normes <a href="https://www.w3.org/standards/webdesign/htmlcss">W3C</a></p>
+        <h1>Onepage test HTML/css</h1>
+        <p><i>Le but de cette page est de construire une page HTML classique respectant les normes </i><a href="https://www.w3.org/standards/webdesign/htmlcss">W3C</a></p>
     </div>
     <!--Navigation qui contient les différents liens vers des éléments du site ou une autre page-->
     <nav class="menu" id="menu">
@@ -79,9 +79,9 @@
             <table>
                 <thead>
                     <tr>
-                        <td>Colonne-1</td>
-                        <td>Colonne-2</td>
-                        <td>Colonne-3</td>
+                        <th>Colonne-1</th>
+                        <th>Colonne-2</th>
+                        <th>Colonne-3</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -106,7 +106,19 @@
 
         <!--Formulaire-->
         <section id="formulaires">
-            
+            <h2>Formulaire</h2>
+            <form methode="POST" action="">
+                <label for="nom">Votre nom :</label>
+                <input type="text" id="nom" name="nom">
+                <br><br>
+                <label for="prenom">Votre prenom :</label>
+                <input type="text" id="prenom" name="prenom">
+                <br><br>
+                <label for="age">Votre age :</label>
+                <input type="text" id="age" name="age">
+                <br><br>
+                <input type="submit" id="submit" value="Enregistrer">
+            </form>
         </section>
     </main>
     <!--Pied de page, contient les information de propriété & de droits réservés-->
