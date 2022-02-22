@@ -1,13 +1,34 @@
 <?php
-$pseudo = $_POST['pseudo'];
-$mail = $_POST['mail'];
-$mp = $_POST['mp'];
+require 'header.php';
+
+//On recupère la valeur select et on le stock dans une variable $form
+$form=$_POST['select'];
+//var_dump($form);
+exit();
 
 
-function afficher($pseudo, $mail, $mp){
-    if(isset($pseudo, $mail, $mp)){
-        echo'les variables exites ';
-    }
-    return $result = afficher();
+if ($form ==[1]) {
+    echo '
+    <div class="containerTab">
+        <h1>Tableau utilisateurs</h1>
+        <p>Liste de utilisateurs enregistrés.</p>
+        <table class="table0" >
+            <thead>
+                <tr>
+                    <th scope="col">Pseudo</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Mot de passe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>'.$pseudo.'</td>
+                    <td>'.$mail.'</td>
+                    <td>'.$mp.'</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>';     
 }
-echo $result;
+
+require 'footer.php';
