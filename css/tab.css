@@ -1,0 +1,69 @@
+/*reset*/
+*{
+
+    margin:0;
+    
+    padding:0;
+    
+}
+
+/*Entête*/
+
+.container-fluid{
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #2d0837;
+}
+
+.container-fluid h1{
+    text-align: center;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.container-fluid ul, li a{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+    color: rgb(255, 199, 95);
+}
+
+.containerTab{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin: 150px 50px 20px;
+    min-width: 800px;
+    max-width: 100%;
+}
+
+.table0 tr th{
+    background-color: lightseagreen;
+    text-align: center;
+}
+
+.table1 tr th{
+    background-color: rgb(32, 178, 64);
+    text-align: center;
+}
+
+.table2 tr th{
+    background-color: rgb(88, 32, 178);
+    text-align: center;
+    color: white;
+}
+
+.table3 tr th{
+    background-color: rgb(253, 82, 2);
+    text-align: center;
+    color: white;
+}
