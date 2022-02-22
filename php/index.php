@@ -1,10 +1,3 @@
-<?php
-$pseudo = $_POST['pseudo'];
-$mail = $_POST['mail'];
-$mp = $_POST['mp'];
-var_dump($pseudo,$mail,$mp);
-echo $pseudo . $mail . $mp;
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,7 +12,7 @@ echo $pseudo . $mail . $mp;
         <div id="register" class="containerForm1">
                 <h1>Formulaire de contact</h1>
                 <p>Merci de renseigner les champs suivant afin de vous enregistrer.</p>
-                <form method="POST" action="">
+                <form action="result.php" method="post">
                     <label for="pseudo">Votre speudo :</label>
                     <input type="text" id="pseudo" name="pseudo" required >       //pattern="[A-Za-z][0-9]"
                     <br><br>
@@ -33,5 +26,6 @@ echo $pseudo . $mail . $mp;
                 </form>
         </div>
     </div>
+    
 </body>
 </html>
