@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Formulaire</title>
+</head>
+<body>
+    <div class="container-fluid" id="menu">
+        <h1>Exemple de formulaires</h1>
+        <nav>
+            <ul>
+                <li><a href="#register">Incritption</a></li>
+                <li><a href="#login">Connexion</a></li>
+                <li><a href="#mess">Message</a></li>
+                <li><a href="#insertData">Enregistement de données</a></li>
+                <li><a href="#search">Recherche</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="containerForm">
+        <!--Formulaire d'enregistrement d'un utilisateur-->
+    <div id="register" class="containerForm1">
+        <h1>Formulaire de contact</h1>
+        <p>Merci de renseigner les champs suivant afin de vous enregistrer.</p>
+        <form method="POST" action="#">
+            <label for="pseudo">Votre speudo :</label>
+            <input type="text" id="pseudo" name="pseudo" required pattern="[A-Za-z][0-9]">       
+            <br><br>
+            <label for="mail">Votre mail :</label>
+            <input type="email" id="mail" name="mail"required>
+            <br><br>
+            <label for="mp">Votre mot de passe :</label>
+            <input type="password" id="mp" name="mp" required>
+            <br><br>
+            <input type="submit" value="Soumettre" class="btn btn-primary">
+        </form>
+    </div>
+
+    <!--Formulaire de connexion d'un utilisateur-->
+    <div id="login" class="containerForm2">
+        <button class="btn btn-warning bg-warning w-25"><a href="#menu">retour menu</a></button>
+        <br>
+        <h1>Connexion</h1>
+        <p>Merci de renseigner les champs suivant afin de vous connecter avec la communauté.</p>
+        <form method="POST" action="#">
+            <label for="pseudoConnect">Votre speudo :</label>
+            <input type="text" id="pseudoConnect" name="pseudoConnect" required pattern="[A-Za-z][0-9]">       
+            <br><br>
+            <label for="mpConnect">Votre mot de passe :</label>
+            <input type="password" id="mpConnect" name="mpConnect" required>
+            <br><br>
+            <input type="submit" value="Connexion" class="btn btn-success">
+        </form>
+    </div>
+
+    <!--Formulaire de contact utilisateur-->
+    <div id="mess" class="containerForm3">
+        <button class="btn btn-warning bg-warning w-25"><a href="#menu">retour menu</a></button>
+        <br>
+        <h1>Message</h1>
+        <p>Merci de renseigner les champs suivant afin de vous connecter avec la communauté.</p>
+        <form method="POST" action="#">
+            <label for="contactMail">Votre mail :</label>
+            <input type="email" id="contactMail" name="contactMail"required>     
+            <br><br>
+            <label for="contactMess">Votre message :</label>
+            <textarea name="contactMess" id="contactMess" cols="10" rows="5" required></textarea>    
+            <br><br>
+            <input type="submit" value="Envoyer" class="btn">
+        </form>
+    </div>
+
+    <!--Formulaire d'insertion de données-->
+    <div id="insertData" class="containerForm4">
+        <button class="btn btn-warning bg-warning w-25"><a href="#menu">retour menu</a></button>
+        <br>
+        <h1>Nouvel enregistrement</h1>
+        <p>Merci de compléter les champs, afin compléter la base de données.</p>
+        <form method="POST" action="#">
+            <label for="auteur">Auteur :</label>
+            <input type="text" id="auteur" name="auteur"> 
+            <br><br>
+            <label for="date">Date :</label>
+            <input type="date" id="auteur" name="auteur"> 
+            <br><br>
+            <label for="categorie">Catégorie :</label>
+            <select name="categorie" id="categorie">
+                <option value="">-</option>
+                <option value="language">Language</option>
+                <option value="syntaxe">Syntaxe</option>
+                <option value="definition">Définition</option>
+            </select>    
+            <br><br>
+            <label for="titre">Titre :</label>
+            <input type="text" id="titre" name="titre">   
+            <br><br>
+            <label for="description">Description :</label>
+            <textarea name="description" id="description" cols="10" rows="5"></textarea>  
+            <br><br>
+            <input type="submit" value="Envoyer" class="btn">
+        </form>
+    </div>
+
+    <!--Formulaire de recherche de données-->
+    <div id="search" class="containerForm5">
+        <button class="btn btn-warning bg-warning w-25"><a href="#menu">retour menu</a></button>
+        <br>
+        <h1>Recherche de datas</h1>
+        <p>Selectionner un type de donnée, afin d'obtenir les résultats de votre recherche.</p>
+        <form method="POST" action="#">
+            <label for="auteur">Auteur :</label>
+            <input type="text" id="auteur" name="auteur"> 
+            <br><br>
+            <label for="date">Date :</label>
+            <input type="date" id="auteur" name="auteur"> 
+            <br><br>
+            <label for="categorie">Catégorie :</label>
+            <select name="categorie" id="categorie">
+                <option value="">-</option>
+                <option value="language">Language</option>
+                <option value="syntaxe">Syntaxe</option>
+            </select>    
+            <br><br>
+            <input type="submit" value="Envoyer" class="btn">
+        </form>
+    </div>
+    </div>
+</body>
+</html>
