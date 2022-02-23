@@ -14,12 +14,12 @@ require 'header.php';
 */
 $form=$_POST['select'];
 $message= '';
-/*ICI $form prend la baleur de la variable select=? 
+/*ICI $form prend la valeur de la variable select=? 
 *pour lire sa valeur on peut utiliser un echo '$form'; afin d'avoir le retour et si la valeur correspond à l'option selectionnée :Le test passe!
 *8.Maintenant il faut afficher le comptenu demandé par l'utilisateur:
-*On peut tester de manière simple dans une condition if() SI la varible existe et est strictement egal à 1 (select>option value= 1) ALORS
+*On peut tester de manière simple dans une condition if() SI la variable existe et est strictement egal à 1 (select>option value= 1) ALORS
 *on affiche le formulaire html via un echo.
-*SINON on affiche un message 'Je ne peux pas afficher ce formulaire, car il n'existe pas', dans un echo.
+*SINON on affiche un message 'Je ne peux pas afficher ce formulaire, car il n'existe pas'.
 if (isset($form) && ($form == 1)) {
     echo '
     <div class="containerTab">
@@ -48,11 +48,11 @@ if (isset($form) && ($form == 1)) {
 *A CE NIVEAU :le test passe on peut maitenant continuer le developpement:
 *Creer une fonction affForm() qui permet d'afficher le formulaire selectionné.
 *Cette fonction prendra en parametre la valeur passé dans $form et affichera le formulaire selectionné.
-*Cynder le html de code php est une bonne pratique, il faut donc créer un dossier phpform qui contiendra 
+*Séparer le html du code php est une bonne pratique, il faut donc créer un dossier phpform qui contiendra 
 *les formulaires ainsi que l'entête et le pied de page associé
 */
 function affForm($form,$message){
-    /*condition 1- si l'utilisateur valide sans selectionner un formulaire il est redirigé sur l'index
+    /*Si l'utilisateur valide sans selectionner un formulaire il est redirigé sur l'index
     et on lui retourne un message*/
     if (isset($form) && ($form >= 0) && empty($message)) {
         $message='<pre>Veuillez selectionner un formulaire dans la zone prévue à cet effet</pre>';
