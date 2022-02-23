@@ -1,14 +1,25 @@
 <?php
+//1-Appel de l'entête:
 require 'header.php';
-
-//On recupère la valeur select et on le stock dans une variable $form
+/*Raisonnement:
+*1.l'utilisateur selectionne via l'option d'un select html un formulaire
+*2.il valide son choix via une balise input qui est rattaché à sa balise parente form
+*3.cette balise parente possede un attribut 'method' qui utilise 2 supers globales GET ou POST
+*4.si GET est utilisé, alors la valeurs envoyées passent par l'url via une variable nommée par l'attrivut name de la balise select
+*la valeur peut donc être modifiée dans l'url
+*5.si POST est utilisé, alors la valeurs envoyées sont stokées en mémoire jusqu'a l'appel de la super global $_POST qui prend en paramatre la valeur
+*de l'attribut name du select 
+*6.ICI: $_POST['select']
+*7.A ce niveau on ne sait pas ce que contien la variable select (select=X), il faut donc stocker la valeur dans une variable pour pouvoir l'utilser.
+*/
 $form=$_POST['select'];
-/*$form doit prendre la valeur de la variable select
-// On test le retour avec un echo ou un var_dump
-//var_dump($form);
-//Puis ton test dans une condition if() si le retour est strictement egal à 1 (formulaire 1)
-//sinon on affiche un message 'Je ne peux pas afficher ce formulaire, car il n'existe pas', dans un echo.
-
+$message= '';
+/*ICI $form prend la baleur de la variable select=? 
+*pour lire sa valeur on peut utiliser un echo '$form'; afin d'avoir le retour et si la valeur correspond à l'option selectionnée :Le test passe!
+*8.Maintenant il faut afficher le comptenu demandé par l'utilisateur:
+*On peut tester de manière simple dans une condition if() SI la varible existe et est strictement egal à 1 (select>option value= 1) ALORS
+*on affiche le formulaire html via un echo.
+*SINON on affiche un message 'Je ne peux pas afficher ce formulaire, car il n'existe pas', dans un echo.
 if (isset($form) && ($form == 1)) {
     echo '
     <div class="containerTab">
@@ -34,43 +45,37 @@ if (isset($form) && ($form == 1)) {
 }else{
     echo'Je ne peux pas afficher ce formulaire, car il n\'existe pas';
 }
-// le test passe on peut maitenant continuer le developpement:
-// Creer une fonction affForm() qui permet d'afficher le formulaire selectionné dans le select.
-// Cette fonction prendra en parametre la valeur passé dans $form et affichera le formulaire selectionné.
+*A CE NIVEAU :le test passe on peut maitenant continuer le developpement:
+*Creer une fonction affForm() qui permet d'afficher le formulaire selectionné.
+*Cette fonction prendra en parametre la valeur passé dans $form et affichera le formulaire selectionné.
+*Cynder le html de code php est une bonne pratique, il faut donc créer un dossier phpform qui contiendra 
+*les formulaires ainsi que l'entête et le pied de page associé
 */
-
-function affForm($form){
-    // condition 1- si l'utilisateur valide sans selectionner un formulaire il est redirigé sur l'index
-    //et on lui retourne un message
-    if (isset($form) && ($form == 0)) {
-        echo 'Vous devez choisir un formulaire !';
-        header('Location:../index.php');
-    }//test=ok
-
-    //Formulaire-1
+function affForm($form,$message){
+    /*condition 1- si l'utilisateur valide sans selectionner un formulaire il est redirigé sur l'index
+    et on lui retourne un message*/
+    if (isset($form) && ($form >= 0) && empty($message)) {
+        $message='<pre>Veuillez selectionner un formulaire dans la zone prévue à cet effet</pre>';
+        echo $message;
+        echo '<form methode="post" action="../index.php">
+                <label name="retour">Pour selectionner à nouveau un formulaire, cliquez-ici :</label>
+                <input type="submit" name="" value="Retour aux formulaires">
+             </form>';
+    }//test=ok  Formulaire-1
     if (isset($form) && ($form == 1)) {
-        echo '
-        <div class="containerForm">
-            <div id="register" class="containerForm1">
-                <h1>Formulaire de contact</h1>
-                <p>Merci de renseigner les champs suivant afin de vous enregistrer.</p>
-                <form method="POST" action="#">
-                    <label for="pseudo">Votre speudo :</label>
-                    <input type="text" id="pseudo" name="pseudo" required pattern="[a-zA-Z0-9]{4,8}">       
-                    <br><br>
-                    <label for="mail">Votre mail :</label>
-                    <input type="email" id="mail" name="mail"required>
-                    <br><br>
-                    <label for="mp">Votre mot de passe :</label>
-                    <input type="password" id="mp" name="mp" required>
-                    <br><br>
-                    <input type="submit" value="Soumettre" class="btn btn-primary">
-                </form>
-            </div>
-        </div>
-        ';     
+        header('Location:./phpform/register.php');
     }//test formulaire-1 ok
-     
-} return affForm($form);
-
+    if (isset($form) && ($form == 2)) {
+        header('Location:./phpform/connect.php');
+    }//test formulaire-1 ok
+    if (isset($form) && ($form == 3)) {
+        header('Location:./phpform/message.php');
+    }//test formulaire-1 ok
+    if (isset($form) && ($form == 4)) {
+        header('Location:./phpform/data.php');
+    }//test formulaire-1 ok
+    if (isset($form) && ($form == 5)) {
+        header('Location:./phpform/search.php');
+    }//test formulaire-1 ok
+} return affForm($form, $message);
 require 'footer.php';
