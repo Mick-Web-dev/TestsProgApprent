@@ -98,13 +98,14 @@ thead th{
     align-content: space-around;
 }
 
-form{
-    width: 400px;
+form, input{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 400px;
     padding: 20px;
+    text-align: center;
     border: solid 2px gray;
     border-radius: 10px;
 }

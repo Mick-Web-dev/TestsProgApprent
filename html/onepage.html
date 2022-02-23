@@ -108,13 +108,13 @@
             <h2>Formulaire</h2>
             <form methode="POST" action="">
                 <label for="nom">Votre nom :</label>
-                <input type="text" id="nom" name="nom">
+                <input type="text" id="nom" name="nom" required pattern="[a-zA-Z]{0,20}">
                 <br><br>
                 <label for="prenom">Votre prenom :</label>
-                <input type="text" id="prenom" name="prenom">
+                <input type="text" id="prenom" name="prenom" required pattern="[a-zA-Z]{0,20}">
                 <br><br>
                 <label for="age">Votre age :</label>
-                <input type="text" id="age" name="age">
+                <input type="number" id="age" name="age" min="10" max="100">
                 <br><br>
                 <input type="submit" id="submit" value="Enregistrer">
             </form>
