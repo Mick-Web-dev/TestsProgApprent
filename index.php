@@ -9,7 +9,7 @@ require_once './php/header.php';
                 <form action="./php/result.php" method="post">
                     <label for="name">Choisissez un formulaire  </label>
                     <select name="select" id="name">
-                        <option value="">liste déroulante ...</option>
+                        <option value=""> - </option>
                         <option value="1">Formulaire d'inscription</option>
                         <option value="2">Formulaire de contact</option>
                         <option value="3">Formulaire de connexion</option>
