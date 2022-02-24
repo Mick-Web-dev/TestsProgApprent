@@ -3,7 +3,7 @@ require_once 'header.php';
 
 echo ' <div class="containerForm">
             <div id="register" class="containerForm1">
-                <button class="btn btn-warning bg-warning w-25"><a href="http://localhost:5789/index.php">retour menu</a></button>
+                <button class="btn btn-warning bg-warning w-30"><a href="http://localhost:5789/index.php">retour menu</a></button>
                 <h1>Formulaire d\'inscription</h1>
                 <p>Merci de renseigner les champs suivant afin de vous enregistrer.</p>
                 <form method="POST" action="#">

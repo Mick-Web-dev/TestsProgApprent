@@ -2,7 +2,7 @@
 require_once 'header.php';
 
 echo ' <div id="insertData" class="containerForm4">
-            <button class="btn btn-warning bg-warning w-25"><a href="http://localhost:5789/index.php">retour menu</a></button>
+            <button class="btn btn-warning bg-warning w-30"><a href="http://localhost:5789/index.php">retour menu</a></button>
             <br>
             <h1>Nouvelle data</h1>
             <p>Merci de compléter les champs, afin compléter la base de données.</p>

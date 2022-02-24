@@ -2,7 +2,7 @@
 require_once 'header.php';
 
 echo ' <div id="search" class="containerForm5">
-            <button class="btn btn-warning bg-warning w-25"><a href="http://localhost:5789/index.php">retour menu</a></button>
+            <button class="btn btn-warning bg-warning w-30"><a href="http://localhost:5789/index.php">retour menu</a></button>
             <br>
             <h1>Recherche de datas</h1>
             <p>Selectionner un type de donnée, afin d\'obtenir les résultats de votre recherche.</p>
